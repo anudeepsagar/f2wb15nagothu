@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  - let results=[{elephant_type:"indian_elephant",elephant_age_limit:40-50 years, elephant_weight:8800lbs},{elephant_type:"African-bush-elephant",elephant_age_limit:60 – 70 years,elephant_weight :13000lbs},{elephant_type :"Borneo-elephant", elephant_age_limit :60-75 years, elephant_weight :4,000 pounds}]
+  div(class="container-fluid")
+  div(class="row")
+  each value,index in results
+    div(class="col-sm-2" onclick=`buy(${index})`)  #{value.elephant_type} elephant , age #{value.elephant_age_limit}, with weight #{value.elephant_weight}
+  script.
+    function buy(index)
+    {
+      alert(`Your elephant type ${index+1}`)
+    }
