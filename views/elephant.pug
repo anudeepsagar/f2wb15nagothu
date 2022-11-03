@@ -2,7 +2,7 @@ extends layout
 
 block content
   h1= title
-  - let results=[{elephant_type:"indian_elephant",elephant_age_limit:40-50 years, elephant_weight:8800lbs},{elephant_type:"African-bush-elephant",elephant_age_limit:60 – 70 years,elephant_weight :13000lbs},{elephant_type :"Borneo-elephant", elephant_age_limit :60-75 years, elephant_weight :4,000 pounds}]
+  - let results=[{elephant_type:'indian_elephant', elephant_age_limit:50, elephant_weight:8800} ,{elephant_type:'African-bush-elephant', elephant_age_limit: 70 , elephant_weight :13000}, {elephant_type:'Borneo-elephant', elephant_age_limit: 75 , elephant_weight :4000} ]
   div(class="container-fluid")
   div(class="row")
   each value,index in results
